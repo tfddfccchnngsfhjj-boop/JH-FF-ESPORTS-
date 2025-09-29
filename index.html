@@ -1,1 +1,78 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JH FF ESPORTS - Free Fire Tournament</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>JH FF ESPORTS</h1>
+    <p>Free Fire Tournament</p>
+  </header>
+
+  <section class="card">
+    <h2>Tournament Information</h2>
+    <p><b>Date:</b> <span id="today-date"></span></p>
+    <p><b>Time:</b> 1st Match: 12 PM, 2nd Match: 6 PM</p>
+    <p><b>Total Players:</b> 48 (12 Squads × 4 Players)</p>
+    <p><b>Entry Fee:</b> ₹200 per Squad</p>
+    <p><b>Rule:</b> No hackers allowed</p>
+  </section>
+
+  <section class="card">
+    <h2>Map & Prizes</h2>
+    <p><b>Map:</b> Bermuda</p>
+    <ul>
+      <li>1st Prize: ₹800</li>
+      <li>2nd Prize: ₹500</li>
+      <li>3rd Prize: ₹300</li>
+    </ul>
+    <p>Custom ID and password will be sent via WhatsApp 10 minutes before the tournament.</p>
+  </section>
+
+  <section class="card">
+    <h2>Registration Form</h2>
+    <form>
+      <label>Squad Name</label>
+      <input type="text" placeholder="Your Squad's Name" required>
+
+      <label>Match Time</label>
+      <select>
+        <option>12:00 PM</option>
+        <option>06:00 PM</option>
+      </select>
+
+      <label>Player 1 FF UID</label>
+      <input type="text" required>
+      <label>Player 2 FF UID</label>
+      <input type="text" required>
+      <label>Player 3 FF UID</label>
+      <input type="text" required>
+      <label>Player 4 FF UID</label>
+      <input type="text" required>
+      <label>Substitute FF UID (Optional)</label>
+      <input type="text">
+
+      <label>WhatsApp Number</label>
+      <input type="text" placeholder="10-digit number" required>
+
+      <h3>Entry Fee Payment: ₹200</h3>
+      <p>Scan QR & upload payment screenshot:</p>
+      <input type="file">
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </section>
+
+  <!-- 🔹 JavaScript for Auto Date -->
+  <script>
+    const dateElement = document.getElementById("today-date");
+    const today = new Date();
+    const options = { day: "numeric", month: "long", year: "numeric" };
+    dateElement.textContent = today.toLocaleDateString("en-IN", options);
+  </script>
+</body>
+</html>
